@@ -814,31 +814,3 @@ async def delete_anime(
     )
 
     await callback.answer()
-
-
-# =========================
-# ЗАПУСК
-# =========================
-
-async def main():
-
-    if not BOT_TOKEN:
-
-        print(
-            "❌ BOT_TOKEN не найден!"
-        )
-
-        return
-
-    await init_db()
-
-    print(
-        "🤖 Бот запущен!"
-    )
-
-    await dp.start_polling(bot)
-
-
-if __name__ == "__main__":
-
-    asyncio.run(main())
